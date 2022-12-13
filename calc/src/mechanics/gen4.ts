@@ -96,6 +96,14 @@ export function calculateDPP(
     desc.moveBP = move.bp;
     desc.moveType = move.type;
   }
+  else if (move.named('Nature Power') && attacker.item && attacker.item.includes('Berry')) {
+    const gift = getNaturalGift(gen, attacker.item)!;
+    move.type = gift.t;
+    move.bp = gift.p;
+    desc.attackerItem = attacker.item;
+    desc.moveBP = move.bp;
+    desc.moveType = move.type;
+  }
 
   if (attacker.hasAbility('Normalize')) {
     move.type = 'Normal';
@@ -155,22 +163,30 @@ export function calculateDPP(
   // #region Base Power
 
   switch (move.name) {
-  case 'Brine':
+  case 'Punishment':
+  case 'Guillotine':
+  case 'Fell Stinger':
     if (defender.curHP() <= defender.maxHP() / 2) {
       basePower *= 2;
       desc.moveBP = basePower;
     }
     break;
-  case 'Eruption':
-  case 'Water Spout':
-    basePower = Math.max(1, Math.floor((basePower * attacker.curHP()) / attacker.maxHP()));
-    desc.moveBP = basePower;
-    break;
   case 'Facade':
+  case 'Flower Force':
+  case 'Skunk Spray':
     if (attacker.hasStatus('par', 'psn', 'tox', 'brn')) {
       basePower = move.bp * 2;
       desc.moveBP = basePower;
     }
+    break;
+  case 'Fire Flurry':
+  case 'Triple Kick':
+    basePower = move.hits === 3 ? 35 : move.hits === 2 ? 30 : 25;
+    desc.moveBP = basePower;
+    break;
+  case 'Hat Trick':
+    basePower = move.hits === 3 ? 30 : move.hits === 2 ? 25 : 20;
+    desc.moveBP = basePower;
     break;
   case 'Flail':
   case 'Reversal':
@@ -199,26 +215,13 @@ export function calculateDPP(
       desc.moveBP = basePower;
     }
     break;
-  case 'Punishment':
-    basePower = Math.min(200, 60 + 20 * countBoosts(gen, defender.boosts));
-    desc.moveBP = basePower;
-    break;
   case 'Wake-Up Slap':
+  case 'Uproar':
+  case 'Nightmare':
     if (defender.hasStatus('slp')) {
       basePower *= 2;
       desc.moveBP = basePower;
     }
-    break;
-  case 'Nature Power':
-    move.category = 'Special';
-    move.secondaries = true;
-    basePower = 80;
-    desc.moveName = 'Tri Attack';
-    break;
-  case 'Crush Grip':
-  case 'Wring Out':
-    basePower = Math.floor((defender.curHP() * 120) / defender.maxHP()) + 1;
-    desc.moveBP = basePower;
     break;
   default:
     basePower = move.bp;
@@ -431,7 +434,10 @@ export function calculateDPP(
   } else if (
     (field.hasWeather('Sun') && move.hasType('Water')) ||
     (field.hasWeather('Rain') && move.hasType('Fire')) ||
-    (move.named('Solar Beam') && field.hasWeather('Rain', 'Sand', 'Hail'))
+    (move.named('Solar Beam') && field.hasWeather('Rain', 'Sand', 'Hail')) ||
+    (move.named('Harsh Flames') && field.hasWeather('Rain', 'Sand', 'Hail')) ||
+    (move.named('Jungle Wind') && field.hasWeather('Rain', 'Sand', 'Hail')) ||
+    (move.named('Solar Blade') && field.hasWeather('Rain', 'Sand', 'Hail'))
   ) {
     baseDamage = Math.floor(baseDamage * 0.5);
     desc.weather = field.weather;
