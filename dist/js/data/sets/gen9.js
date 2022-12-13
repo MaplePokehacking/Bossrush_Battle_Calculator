@@ -1,0 +1,2 @@
+/* AUTOMATICALLY GENERATED FROM @smogon/sets, DO NOT EDIT! */
+var SETDEX_SV = {"Abomasnow":{"Bugbreaker":{"level":100,"ability":"Snow Warning","item":"Choice Band","nature":"Adamant","evs":{"hp":172,"at":252,"sp":84},"moves":["Head Smash","Flare Blitz","Brave Bird","Hidden Power Bug"]}}};
