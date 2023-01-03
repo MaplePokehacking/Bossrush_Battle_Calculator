@@ -1016,7 +1016,7 @@ var DPP_PATCH = {
         makesContact: true
     },
     'Headlong Rush': {
-        bp: 110,
+        bp: 120,
         type: 'Ground',
         category: 'Physical',
         makesContact: true

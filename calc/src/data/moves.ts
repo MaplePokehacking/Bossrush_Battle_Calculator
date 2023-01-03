@@ -1024,7 +1024,7 @@ const DPP_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     makesContact: true,
   },
   'Headlong Rush': {
-    bp: 110,
+    bp: 120,
     type: 'Ground',
     category: 'Physical',
     makesContact: true,

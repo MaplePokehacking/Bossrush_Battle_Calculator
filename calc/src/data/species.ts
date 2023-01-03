@@ -494,7 +494,7 @@ const RBY: {[name: string]: SpeciesData} = {
     nfe: true,
   },
   Ninetales: {
-    types: ['Fire'],
+    types: ['Fire', 'Psychic'],
     bs: {hp: 69, at: 69, df: 69, sp: 99, sl: 100},
     weightkg: 19.9,
   },
@@ -752,7 +752,7 @@ const RBY: {[name: string]: SpeciesData} = {
     nfe: true,
   },
   Vulpix: {
-    types: ['Fire'],
+    types: ['Fire', 'Psychic'],
     bs: {hp: 50, at: 41, df: 45, sp: 75, sl: 65},
     weightkg: 9.9,
     nfe: true,
@@ -962,7 +962,7 @@ const GSC_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 61.5,
   },
   Ariados: {
-    types: ['Bug', 'Dark'],
+    types: ['Bug', 'Poison'],
     bs: {hp: 75, at: 115, df: 90, sa: 85, sd: 66, sp: 99},
     weightkg: 33.5,
   },
@@ -1369,7 +1369,7 @@ const GSC_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     nfe: true,
   },
   Spinarak: {
-    types: ['Bug', 'Dark'],
+    types: ['Bug', 'Poison'],
     bs: {hp: 45, at: 75, df: 55, sa: 60, sd: 40, sp: 68},
     weightkg: 8.5,
     nfe: true,
@@ -4580,10 +4580,10 @@ const DPP_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     gender: 'N',
   },
   Vespiquen: {
-    types: ['Bug', 'Flying'],
+    types: ['Bug', 'Dark'],
     bs: {hp: 95, at: 95, df: 105, sa: 95, sd: 105, sp: 40},
     weightkg: 38.5,
-    abilities: {0: 'Pressure'},
+    abilities: {0: 'Levitate'},
   },
   Voodoll: {
     types: ['Normal', 'Dark'],
