@@ -123,7 +123,7 @@ var RBY = {
         weightkg: 19,
         nfe: true
     },
-    Clefable: { types: ['Fairy'], bs: { hp: 95, at: 85, df: 73, sp: 60, sl: 85 }, weightkg: 40 },
+    Clefable: { types: ['Fairy'], bs: { hp: 95, at: 85, df: 78, sp: 60, sl: 85 }, weightkg: 40 },
     Clefairy: {
         types: ['Fairy'],
         bs: { hp: 85, at: 65, df: 63, sp: 60, sl: 60 },
@@ -1629,8 +1629,8 @@ var ADV_PATCH = {
     Snorlax: { abilities: { 0: 'Immunity' } },
     Spearow: { abilities: { 0: 'Keen Eye' } },
     Squirtle: { abilities: { 0: 'Torrent' } },
-    Starmie: { abilities: { 0: 'Illuminate' } },
-    Staryu: { abilities: { 0: 'Illuminate' } },
+    Starmie: { abilities: { 0: 'Trace' } },
+    Staryu: { abilities: { 0: 'Trace' } },
     Tangela: { abilities: { 0: 'Chlorophyll' } },
     Tauros: { abilities: { 0: 'Intimidate' } },
     Tentacool: { abilities: { 0: 'Clear Body' } },
@@ -2761,8 +2761,8 @@ var DPP_PATCH = {
     Slowpoke: { abilities: { 0: 'Unaware' } },
     Snorlax: { abilities: { 0: 'Thick Fat' } },
     Squirtle: { abilities: { 0: 'Torrent' } },
-    Starmie: { abilities: { 0: 'Trace' } },
-    Staryu: { abilities: { 0: 'Trace' } },
+    Starmie: { abilities: { 0: 'Filter' } },
+    Staryu: { abilities: { 0: 'Filter' } },
     Tangela: { abilities: { 0: 'Thick Fat' } },
     Tentacool: { abilities: { 0: 'Clear Body' } },
     Tentacruel: { abilities: { 0: 'Clear Body' } },
@@ -3058,7 +3058,7 @@ var DPP_PATCH = {
         types: ['Psychic', 'Fairy'],
         bs: { hp: 75, at: 65, df: 65, sa: 125, sd: 115, sp: 90 },
         weightkg: 48.4,
-        abilities: { 0: 'Synchronize' }
+        abilities: { 0: 'Trace' }
     },
     Glalie: {
         types: ['Ice'],
@@ -3116,7 +3116,7 @@ var DPP_PATCH = {
         bs: { hp: 58, at: 55, df: 55, sa: 95, sd: 95, sp: 70 },
         weightkg: 20.2,
         nfe: true,
-        abilities: { 0: 'Synchronize' }
+        abilities: { 0: 'Trace' }
     },
     Kyogre: {
         types: ['Water'],
@@ -3301,7 +3301,7 @@ var DPP_PATCH = {
         bs: { hp: 48, at: 45, df: 45, sa: 65, sd: 55, sp: 60 },
         weightkg: 6.6,
         nfe: true,
-        abilities: { 0: 'Synchronize' }
+        abilities: { 0: 'Trace' }
     },
     Rayquaza: {
         types: ['Dragon', 'Flying'],

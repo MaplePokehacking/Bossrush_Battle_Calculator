@@ -390,7 +390,7 @@ var ADV_PATCH = {
     'Water Sport': { bp: 0, category: 'Status', type: 'Water' },
     Wish: { bp: 0, category: 'Status', type: 'Normal' },
     'Air Cutter': { bp: 60, type: 'Flying', target: 'allAdjacentFoes' },
-    Facade: { bp: 55, type: 'Normal', makesContact: true },
+    Facade: { bp: 70, type: 'Normal', makesContact: true },
     'Heat Wave': { bp: 95, type: 'Fire', target: 'allAdjacentFoes' },
     'Hyper Voice': { bp: 90, type: 'Normal', isSound: true, target: 'allAdjacentFoes' },
     'Metal Sound': { bp: 0, category: 'Status', type: 'Steel', isSound: true },
@@ -925,7 +925,7 @@ var DPP_PATCH = {
         category: 'Special'
     },
     'X-Scissor': {
-        bp: 85,
+        bp: 90,
         type: 'Bug',
         makesContact: true,
         category: 'Physical'
@@ -937,7 +937,7 @@ var DPP_PATCH = {
         category: 'Physical'
     },
     'Harsh Flames': {
-        bp: 105,
+        bp: 110,
         type: 'Fire',
         category: 'Special'
     },
@@ -948,7 +948,7 @@ var DPP_PATCH = {
         multihit: 2
     },
     'Flower Force': {
-        bp: 55,
+        bp: 70,
         type: 'Grass',
         category: 'Special'
     },
@@ -1093,12 +1093,12 @@ var DPP_PATCH = {
         category: 'Special'
     },
     'Skunk Spray': {
-        bp: 55,
+        bp: 70,
         type: 'Poison',
         category: 'Special'
     },
     Rampage: {
-        bp: 120,
+        bp: 130,
         type: 'Dark',
         category: 'Physical',
         makesContact: true
@@ -1408,7 +1408,7 @@ var DPP_PATCH = {
         makesContact: true
     },
     Malware: {
-        bp: 80,
+        bp: 85,
         type: 'Ghost',
         category: 'Special'
     },
@@ -1494,9 +1494,9 @@ var BW_PATCH = {
     Thunderbolt: { secondaries: true },
     Uproar: { bp: 90 },
     Whirlpool: { bp: 35 },
-    'Petal Dance': { bp: 120 },
+    'Petal Dance': { bp: 130 },
     Tackle: { bp: 50 },
-    Thrash: { bp: 120 },
+    Thrash: { bp: 130 },
     'Bone Club': { secondaries: true },
     Constrict: { secondaries: true },
     'Dizzy Punch': { secondaries: true },
