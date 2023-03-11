@@ -1278,7 +1278,7 @@ const DPP_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     priority: 1,
   },
   'Dual Chop': {
-    bp: 30,
+    bp: 35,
     type: 'Dragon',
     category: 'Physical',
     makesContact: true,
